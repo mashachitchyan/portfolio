@@ -188,15 +188,15 @@ iframe {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        width: 100%; /* Adjust as needed */
-        height: 500px; /* Adjust as needed */
+        width: 100%;
+        height: 500px; 
         box-sizing: border-box;
-        outline: none; /* Optional: Remove focus outline */
+        outline: none; 
 }
 
 #section-2::before {
     content: '';
-    display: block; /* Makes it act as a block element */
+    display: block; 
     width: 100%;
     height: 1px;
     background-color: var(--primary-transparent-30);
@@ -208,7 +208,7 @@ iframe {
 
 #section-3::before {
     content: '';
-    display: block; /* Makes it act as a block element */
+    display: block;
     width: 100%;
     height: 1px;
     background-color: var(--primary-transparent-30);
@@ -218,7 +218,50 @@ iframe {
     margin-right: auto;
 }
 
-#section-3 .projectImage {
-    height: 93vh;   
+.projectImageLarge {
+    height: 93%;   
+    width: 100%;
+    position: relative;
     object-fit: cover;
+    clip-path: inset(0 0 0 2px);
+    border-radius: var(--spacing-2x);
+    object-position: top left;
+    margin-bottom: var(--spacing-10x);
+
+}
+
+@media (max-width: 1280px) {
+
+    .projectImageLarge {
+        height: 90%;
+        position: relative;
+        object-fit: cover;
+        clip-path: inset(0 0 0 2px);
+        border-radius: var(--spacing-2x);
+        object-position: top left;
+        margin-bottom: var(--spacing-10x);
+    }
+
+    .projectImage {
+        max-height: 60vh;
+    }
+    
+}
+
+@media (max-width: 1024px) {
+
+    .projectImageLarge {
+        height: 90%;
+        position: relative;
+        object-fit: cover;
+        clip-path: inset(0 0 0 2px);
+        border-radius: var(--spacing-2x);
+        object-position: top;
+        margin-bottom: var(--spacing-20x);
+    }
+
+    .projectImage {
+        max-height: 40vh;
+    }
+    
 }
