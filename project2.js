@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'section-3': {
             title: 'Customization',
-            description: 'The user can add, remove or change the order of the pre-made blocks depending on their personal needs.'
+            description: 'The CRM platform offers a modular design approach, allowing users to tailor their experience by adding, removing, or rearranging pre-made blocks of functionality. This customization ensures the platform adapts to the unique needs and workflows of each business.'
         },
         'section-4': {
             title: 'User Profile',
