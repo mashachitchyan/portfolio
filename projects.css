@@ -182,3 +182,13 @@ body {
     background-color: #474742;
 }
 
+iframe {
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%; /* Adjust as needed */
+        height: 500px; /* Adjust as needed */
+        box-sizing: border-box;
+        outline: none; /* Optional: Remove focus outline */
+}

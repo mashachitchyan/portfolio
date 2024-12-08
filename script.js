@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "A user-friendly finance tracking app designed to empower individuals and businesses to effectively manage their finances. The visually appealing interface simplifies financial management, while providing insightful analytics and personalized recommendations.",
         ];
 
-        projectSummary.textContent = projectSummaries[currentPage]; 
+        projectSummary.textContent = projectSummaries[currentPage];
     }
 
     prevButton.addEventListener("click", () => {
@@ -276,21 +276,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openOverlay1.addEventListener("click", () => {
         overlay.style.display = "flex";
-        overlayFrame.src = "Ingo_Insurance.html"; 
-        closeOverlay.style.display = "none"; 
+        overlayFrame.src = "Ingo_Insurance.html";
+        closeOverlay.style.display = "none";
     });
 
     openOverlay2.addEventListener("click", () => {
         overlay.style.display = "flex";
         overlayFrame.src = "Finance_app.html";
-        closeOverlay.style.display = "none"; 
+        closeOverlay.style.display = "none";
     });
 
     closeOverlay.addEventListener("click", () => {
         overlay.style.display = "none";
-        overlayFrame.src = ""; 
+        overlayFrame.src = "";
     });
 });
+
+
+// Aside text change 
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section2 = document.getElementById('section-2');
+    const aside = document.querySelector('.aside');
+
+    if (section2) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aside.querySelector('h2').textContent = 'DESIGN SYSTEM';
+                    aside.querySelector('p').textContent = 'I developed a robust, scalable design system to ensure a unified and cohesive look across all pages of the site. This system serves as a blueprint for all future updates, creating a set of reusable components that adhere to the company brand guidelines.Atomic design principles were used to create modular components (e.g., buttons, form fields, navigation bars), allowing for easy scaling and modification as the site evolves.Consistent typography, color palettes, and iconography were integrated to reinforce brand identity while maintaining visual clarity and ease of use.';
+                } else {
+                    aside.querySelector('h2').textContent = 'INGO Insurance';
+                    aside.querySelector('p').textContent = 'In this comprehensive redesign, my goal was to enhance both the functionality and aesthetic of the insurance company\'s website, transforming it into a modern, user-centric digital platform. The project spanned several areas, from creating a streamlined product page to implementing a consistent design system and developing an intuitive personal cabinet. Each aspect of the redesign was aimed at improving the user experience, increasing engagement, and aligning the visual identity with the company\'s brand.';
+                }
+            });
+        }, {
+            threshold: [0.3, 0.5]
+        });
+
+        observer.observe(section2);
+    } else {
+        console.log('section-2 element not found!');
+    }
+});
+
+
+// Back to projects
+
+document.getElementById("closeOverlayFromIframe").addEventListener("click", () => {
+    window.parent.document.getElementById("closeOverlay").click();
+});
+
+
 
 
 
