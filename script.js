@@ -278,6 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeOverlay = document.getElementById("closeOverlay");
     const openOverlay1 = document.getElementById("openOverlay1");
     const openOverlay2 = document.getElementById("openOverlay2");
+    const openOverlay3 = document.getElementById("openOverlay3");
 
     openOverlay1.addEventListener("click", () => {
         overlay.style.display = "flex";
@@ -290,6 +291,12 @@ document.addEventListener("DOMContentLoaded", () => {
         overlayFrame.src = "2.CRM_Platform.html";
         closeOverlay.style.display = "none";
     });
+
+    openOverlay3.addEventListener('click', () => {
+        overlay.style.display = "flex";
+        overlayFrame.src = "3.Design_system.html";
+        closeOverlay.style.display = "none";
+    })
 
     closeOverlay.addEventListener("click", () => {
         overlay.style.display = "none";
