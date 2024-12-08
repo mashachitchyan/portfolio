@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "Antonio-Regular.ttf";
+    src: url(./fonts/Antonio-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata_Condensed-Bold.ttf";
+    src: url(./fonts/Inconsolata_Condensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata_Condensed-Regular.ttf";
+    src: url(./fonts/Inconsolata_Condensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata_Condensed-SemiBold.ttf";
+    src: url(./fonts/Inconsolata_Condensed-SemiBold.ttf);
+}
+
+:root {
+    /* colors */
+    --background-color: #101010;
+    --secondary-color: #CCC9BB;
+    --primary-gradient: linear-gradient(90deg, hsl(0, 0%, 9%), var(--background-color));
+    --secondary-transparent-60: rgba(204, 201, 187, 0.6);
+    --secondary-transparent-30: rgba(204, 201, 187, 0.3);
+    --secondary-transparent-0: rgba(204, 201, 187, 0.01);
+    /* spacing */
+    --spacing-1x: 0.25rem;
+    --spacing-2x: 0.5rem;
+    --spacing-3x: 0.75rem;
+    --spacing-4x: 1rem;
+    --spacing-5x: 1.25rem;
+    --spacing-6x: 1.5rem;
+    --spacing-8x: 2rem;
+    --spacing-10x: 2.25rem;
+    --spacing-12x: 3rem;
+    --spacing-14x: 4rem;
+    --spacing-17x: 4.25rem;
+    --spacing-20x: 5rem;
+    --spacing-26x: 6.5rem;
+    /* border-radius */
+    --border-radius-sm: 6px;
+    /* typography */
+    --font-size-heading-lg: 2rem;
+    --font-size-heading-md: 1.75rem;
+    --font-size-paragraph: 1.1rem;
+    --font-size-paragraph-lg: 1.25rem;
+    --font-size-button: 1.15rem;
+    --font-size-accent: 10rem;
+    --font-family-heading: "Antonio-Regular.ttf";
+    --font-family-paragraph: "Inconsolata_Condensed-Regular.ttf";
+    --font-family-button: "Inconsolata_Condensed-Semibold.ttf";
+    --font-family-paragraph-bold: "Inconsolata_Condensed-Bold.ttf";
+    /* transitions */
+    --transition-duration: 0.4s;
+    --transition-function: ease-out;
+    --transition-delay: 400ms;
+
+    /* define light mode variables here and then use classes to apply them with javascript */
+}
+
+
+.aside {
+    position: fixed;
+    left: 0px;
+    width: 300px;
+    height: 92vh;
+    border: 1px solid black;
+    margin: var(--spacing-8x) 0;
+    background-color: var(--background-color);
+    border-top-right-radius: var(--spacing-2x);
+    border-bottom-right-radius: var(--spacing-2x);
+    padding: var(--spacing-8x);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: transparent;
+}
+
+.primaryButton {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-2x);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--secondary-color);
+    font-family: var(--font-family-button);
+    font-size: var(--font-size-button);
+    color: var(--secondary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: var(--spacing-2x) var(--spacing-4x);
+    border-radius: var(--border-radius-sm);
+    width: fit-content;
+    height: fit-content;
+    transition: var(--transition-duration);
+}
+
+.primaryButton:hover {
+    background-color: var(--secondary-transparent-30);
+    border: 1px solid var(--secondary-transparent-0);
+}
+
+body {
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    overflow: hidden scroll;
+}
+
+.main {
+    width: calc(100% - 364px);
+    position: absolute;
+    right: 0px;
+    padding-right: var(--spacing-8x);
+    padding-top: var(--spacing-8x);
+}
+
+.heading-lg {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading-lg);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.heading-md {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading-md);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.heading-sm {
+    font-family: var(--font-family-heading);
+    font-size: var(--spacing-6x);
+    color: var(--background-color);
+    margin: 0;
+    padding-bottom: var(--spacing-2x);
+}
+
+.paragraphLargeBold {
+    font-family: var(--font-family-paragraph-bold);
+    font-size: var(--font-size-paragraph-lg);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.paragraph {
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-paragraph);
+    color: var(--secondary-color);
+}
+
+.projectImages {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4x);
+}
+
+.projectImages .heading-md {
+    color: var(--background-color);
+    margin: 0;
+}
+
+.projectImage {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: var(--spacing-2x);
+    margin-bottom: var(--spacing-4x);
+}
+
+.gif-background {
+    width: 100%;
+    height: 70vh;
+    background-color: #474742;
+}
+
