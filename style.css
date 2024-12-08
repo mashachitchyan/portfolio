@@ -457,7 +457,7 @@ button {
     grid-row: 2 / -1;
     grid-column: 1;
     z-index: 4;
-    padding-right: var(--spacing-8x);
+    margin-right: var(--spacing-8x);
 }
 
 #experience {
@@ -527,9 +527,33 @@ button {
     border-radius: var(--border-radius-sm);
 }
 
-#download-button {
-    width: 100%;
-    margin-top: var(--spacing-8x);
+.download-button {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: var(--spacing-2x); 
+    background-color: transparent;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: var(--spacing-2x) var(--spacing-4x);
+    margin: var(--spacing-8x) 0 0 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-button);
+}
+
+.download-button:hover {
+    background-color: var(--secondary-transparent-30);
+    border: 1px solid var(--secondary-transparent-0);
+}
+
+.download-button img {
+    width: 16px; /* Adjust icon size */
+    height: 16px;
+}
+
+.download-button span {
+    display: block; /* Ensure text behaves correctly */
 }
 
 #all-projects-button {
