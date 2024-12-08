@@ -245,10 +245,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const projectSummaries = [
             "Insurance company website redesign with a focus on improving customer experience. The project involved creating intuitive navigation, optimizing mobile responsiveness, and enhancing the visual layout to align with the company's brand identity.",
+            "In a rapidly evolving business landscape, effective Customer Relationship Management (CRM) platforms are indispensable. This project aims to revamp an existing CRM platform, enriching its features and enhancing user experience across both web and mobile platforms.",
             "A user-friendly finance tracking app designed to empower individuals and businesses to effectively manage their finances. The visually appealing interface simplifies financial management, while providing insightful analytics and personalized recommendations.",
         ];
 
         projectSummary.textContent = projectSummaries[currentPage];
+
+        const projectYears = [2024, 2024, 2023];
+
+        projectYear.textContent = projectYears[currentPage];
     }
 
     prevButton.addEventListener("click", () => {
@@ -276,13 +281,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openOverlay1.addEventListener("click", () => {
         overlay.style.display = "flex";
-        overlayFrame.src = "Ingo_Insurance.html";
+        overlayFrame.src = "1.Ingo_Insurance.html";
         closeOverlay.style.display = "none";
     });
 
     openOverlay2.addEventListener("click", () => {
         overlay.style.display = "flex";
-        overlayFrame.src = "Finance_app.html";
+        overlayFrame.src = "2.CRM_Platform.html";
         closeOverlay.style.display = "none";
     });
 
@@ -291,64 +296,4 @@ document.addEventListener("DOMContentLoaded", () => {
         overlayFrame.src = "";
     });
 });
-
-
-// Aside text change 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const aside = document.querySelector('.aside');
-
-    // Define a mapping of section IDs to their corresponding text content
-    const sections = {
-        'section-1': {
-            title: 'INGO Insurance',
-            description: 'In this comprehensive redesign, my goal was to enhance both the functionality and aesthetic of the insurance company\'s website, transforming it into a modern, user-centric digital platform. The project spanned several areas, from creating a streamlined product page to implementing a consistent design system and developing an intuitive personal cabinet. Each aspect of the redesign was aimed at improving the user experience, increasing engagement, and aligning the visual identity with the company\'s brand.'
-        },
-        'section-2': {
-            title: 'DESIGN SYSTEM',
-            description: 'I developed a robust, scalable design system to ensure a unified and cohesive look across all pages of the site. This system serves as a blueprint for all future updates, creating a set of reusable components that adhere to the company brand guidelines. Atomic design principles were used to create modular components (e.g., buttons, form fields, navigation bars), allowing for easy scaling and modification as the site evolves. Consistent typography, color palettes, and iconography were integrated to reinforce brand identity while maintaining visual clarity and ease of use.'
-        },
-        'section-3': {
-            title: 'PERSONAL CABINET',
-            description: 'The personal cabinet section underwent a full redesign to create a more intuitive and efficient experience for users managing their insurance policies. This secure area allows users to view policy details, make payments, file claims, and update personal information. I focused on user-centered design principles, ensuring that actions like updating policy details or filing a claim are easy to complete with minimal friction. Microinteractions and animations were incorporated to provide feedback on user actions (e.g., saving changes or submitting forms), offering a smoother, more interactive experience.'
-        }
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const sectionId = entry.target.id;
-                const { title, description } = sections[sectionId] || {};
-                if (title && description) {
-                    aside.querySelector('h2').textContent = title;
-                    aside.querySelector('p').textContent = description;
-                }
-            }
-        });
-    }, {
-        threshold: [0.3, 0.5] // Trigger when 50% of the section is in view
-    });
-
-    // Observe all sections dynamically
-    Object.keys(sections).forEach(sectionId => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            observer.observe(section);
-        } else {
-            console.log(`Section with ID "${sectionId}" not found!`);
-        }
-    });
-});
-
-
-// Back to projects
-
-document.getElementById("closeOverlayFromIframe").addEventListener("click", () => {
-    window.parent.document.getElementById("closeOverlay").click();
-});
-
-
-
-
-
 
