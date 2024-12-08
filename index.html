@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masha Chitchyan | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gridContainer">
+    <div id="overlay" class="overlay">
+        <div id="overlayContent" class="overlay-content">
+            <iframe id="overlayFrame" src="" frameborder="0" width="100%" height="100%"></iframe>
+            <button id="closeOverlay" class="close-button" style="display: none;">Close</button>
+        </div>
+    </div>
+    <div class="navBar">
+        <div class="navButtons">
+            <a href="#" class="primaryButton navItem" id="homeButton">Home</a>
+            <a href="#" class="primaryButton navItem" id="projectsButton">Projects</a>
+            <a href="#" class="primaryButton navItem" id="resumeButton">Resume</a>
+            <a href="#" class="primaryButton navItem" id="contactsButton">Contacts</a>
+            <!-- <a href="/_unused/mobile.html" class="primaryButton navItem">Mobile</a> -->
+            <h1 class="nameLogo hidden">masha:chitchyan</h1>
+
+        </div>
+        <div class="dateAndLocation">
+            <p class="paragraph" id="location">Toronto, ON</p>
+            <p class="paragraph dateTime" id="dateTime"></p>
+        </div>
+        <div class="ghostButton">
+            <a href="https://www.linkedin.com/in/masha-chitchyan/" class="paragraph" id="linkedinButton"
+                target="_blank">Linkedin</a>
+            <img src="./images/external_link.svg" alt="External link icon" aria-label="Go to Linkedin profile"
+                id="externalLinkIcon">
+        </div>
+        <button class="button" id="modeSwitcher"><img src="./images/Mode switcher.svg"
+                alt="mode switcher icon"></button>
+    </div>
+    <main class="content three-columns">
+        <div class="column" id="noGradient">
+            <div class="sliderContainer" id="sliderContainer">
+                <div class="projectSummary">
+                    <p class="paragraph" id="project-summary">Insurance company website redesign with a focus on
+                        improving customer experience. The project involved creating intuitive navigation, optimizing
+                        mobile responsiveness, and enhancing the visual layout to align with the company's brand
+                        identity.</p>
+                </div>
+                <p class="paragraphLargeBold" id="project-year">2024</p>
+                <div class="slider" id="slider">
+                    <button class="primaryButton prev" id="prev">&lt;</button>
+                    <div class="pagination" id="pagination"></div>
+                    <button class="primaryButton next" id="next">&gt;</button>
+                </div>
+            </div>
+        </div>
+        <div class="column" id="column-1">
+            <div class="summary" id="summary">
+                <p class="paragraph transparent">About me</p>
+                <div class="gradient"></div>
+                <h1 class="nameLogo">masha:chitchyan</h1>
+                <p class="paragraphLarge">I craft websites that align with brand identity and engage audiences-creating
+                    meaningful and memorable experiences.</p>
+            </div>
+            <div class="projects" id="projects">
+                <div class="projects-container" id="projects-container">
+                    <div class="slide" id="slide-1">
+                        <h2 class="heading-lg">001 : INGO Insurance</h2>
+                        <div class="gradient">
+                            <img src="./videos/newloop.gif"></img>
+                        </div>
+                        <div class="project-more">
+                            <div class="skillTags">
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>User research</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>User flow</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Prototyping</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Responsive design</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Design system development</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Human centered design</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Usability testing</p>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button id="openOverlay1" class="primaryButton">Open Overlay 1</button>
+                                <a href="https://ingoarmenia.am/" class="ghostButton paragraph transparent"
+                                    target="_blank">Visit live website <img src="./images/external_link.svg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide-2">
+                        <h2 class="heading-lg">002 : Finance tracking app</h2>
+                        <div class="noGradient">
+                            <img src="./videos/Project 2.gif"></img>
+                        </div>
+                        <div class="project-more">
+                            <div class="skillTags">
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>User research</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>User flow</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Prototyping</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>UI Design</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Human centered design</p>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button id="openOverlay2" class="primaryButton">Open Overlay 2</button>
+                                <a href="https://ingoarmenia.am/" class="ghostButton paragraph transparent"
+                                    target="_blank">Visit live website <img src="./images/external_link.svg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="accentText" id="accentText">Let's connect</h2>
+            <div id="contacts">
+                <div id="contactLinks">
+                    <p class="paragraph transparent">Links</p>
+                    <a href="https://www.linkedin.com/in/masha-chitchyan/" class="primaryButton"
+                        target="_blank">Linkedin <img src="./images/external_link.svg" alt="External link icon"></a>
+                    <a href="https://www.behance.net/mashachitchyan" class="primaryButton" target="_blank">Behance <img
+                            src="./images/external_link.svg" alt="External link icon"></a>
+                    <a href="https://dribbble.com/mashachitchyan" class="primaryButton" target="_blank">Dribbble <img
+                            src="./images/external_link.svg" alt="External link icon"></a>
+                </div>
+                <div id="contactInfo">
+                    <p class="paragraph transparent">Information</p>
+                    <a href="www.gmail.com" class="ghostButton paragraph">masha.chitchyan@gmail.com</a>
+                    <p class="paragraph" id="phone">+1 437 439 0256</p>
+                </div>
+            </div>
+            <div class="paragraphLarge" id="about-me">
+                <p>
+                    I am a front-end designer and developer with a passion for crafting visually engaging and
+                    user-centered digital experiences.
+                    <br>
+                    <br>
+                    With experience across several industries, I am
+                    skilled in collaborating with cross-functional teams, ensuring that designs are not only visually
+                    compelling but also practical for development and long-term maintenance.
+                </p>
+                <button class="primaryButton" id="download-button">
+                    <img src="./images/Download.svg" alt="download">
+                    <p>Download resume</p>
+                </button>
+            </div>
+        </div>
+        <div class="column" id="column-2">
+            <div id="experience">
+                <h3 class="heading-md">EXPERIENCE</h3>
+                <div class="companyBlock">
+                    <div class="nameYear">
+                        <p class="paragraphLargeBold">Ingo Insurance</p>
+                        <p class="paragraph">March 2024-Present</p>
+                    </div>
+                    <p class="paragraphBold transparent">User experience designer</p>
+                    <p class="paragraph">Currently redesigning the company website by recreating user flows, adopting
+                        human-centered design, and incorporating new products. Collaborating closely with IT, the
+                        project manager, marketing, and other departments to ensure smooth collaboration and ongoing
+                        input.</p>
+                </div>
+                <div class="companyBlock">
+                    <div class="nameYear">
+                        <p class="paragraphLargeBold">Freelance</p>
+                        <p class="paragraph">2022-Present</p>
+                    </div>
+                    <p class="paragraphBold transparent">User experience designer</p>
+                    <p class="paragraph">Developing an unreleased fintech product in Armenia, establishing user
+                        flows, and collaborating with the development team. Previously worked with Binary Click
+                        Web and Fadys.ca on website redesigns and UI/UX audits across various industries.</p>
+                </div>
+                <div class="companyBlock">
+                    <div class="nameYear">
+                        <p class="paragraphBold">Two Arcs Art Space</p>
+                        <p class="paragraph">2020-2022</p>
+                    </div>
+                    <p class="paragraphBold transparent">Co-Founder</p>
+                    <p class="paragraph">Curated art collections, designed visitor experiences, developed the gallery's
+                        online presence, and organized exhibitions from concept to completion.</p>
+                </div>
+            </div>
+            <div class="featured" id="featured">
+                <p class="paragraph transparent">Projects</p>
+                <div class="gradient">
+                    <img src="./videos/newloop.gif"></img>
+                </div>
+                <div class="allProjects">
+                    <h2 class="heading-lg">001 : Featured : Ingo insurance</h2>
+                    <div class="projectDescription">
+                        <p class="paragraph">Insurance company website redesign with a focus on improving customer
+                            experience. The project involved creating intuitive navigation, optimizing mobile
+                            responsiveness, and enhancing the visual layout to align with the company's brand identity.
+                        </p>
+                        <p class="paragraphLarge">2024</p>
+                    </div>
+                    <button class="primaryButton" id="all-projects-button">
+                        <p>All projects</p>
+                        <img src="./images/arrow_down.svg" alt="download">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="column" id="column-3">
+            <div id="education">
+                <h3 class="heading-md">EDUCATION<h3>
+                        <div class="schoolsBlock">
+                            <div class="nameYear">
+                                <p class="paragraphLargeBold">George Brown College</p>
+                                <p class="paragraph">2024-2025</p>
+                            </div>
+                            <p class="paragraph transparent">Front-end design and development</p>
+                        </div>
+                        <div class="schoolsBlock">
+                            <div class="nameYear">
+                                <p class="paragraphLargeBold">Google UX Design Certificate</p>
+                                <p class="paragraph">2023</p>
+                            </div>
+                        </div>
+                        <div class="schoolsBlock">
+                            <div class="nameYear">
+                                <p class="paragraphLargeBold">Yerevan State University</p>
+                                <p class="paragraph">2012-2018</p>
+                            </div>
+                            <p class="paragraph transparent">MA in International Relations</p>
+                        </div>
+                        <div class="skills">
+                            <h3 class="heading-md">WHAT DO I DO?</h3>
+                            <div class="skillTags">
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>User research</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>User flow</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Prototyping</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Responsive design</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Design system development</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>HCD</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>Usability testing</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>CSS</p>
+                                </div>
+                                <div class="skillTag">
+                                    <img src="./images/dot.svg" alt="dot">
+                                    <p>JavaScript</p>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </main>
+    <main class="mobile">
+        <div class="header">
+            <img class="logo" src="./images/logo.svg" alt="logo">
+            <div class="menu">
+                <div class="line" id="line-1"></div>
+                <div class="line" id="line-2"></div>
+            </div>
+        </div>
+        <div class="about-me-mobile">
+            <p class="paragraph transparent">About me</p>
+            <div class="gradient"></div>
+            <p class="paragraphLarge">I craft websites that align with brand identity and engage audiences-creating
+                meaningful and memorable experiences.</p>
+        </div>
+        <div class="featured">
+            <div class="featured-mobile">
+                <p class="paragraph transparent">Projects</p>
+                <div class="gradient">
+                    <img src="./videos/newloop.gif"></img>
+                </div>
+                <div class="allProjects">
+                    <h2 class="heading-lg">001 : Featured : Ingo insurance</h2>
+                    <div class="projectDescription">
+                        <p class="paragraph">Insurance company website redesign with a focus on improving customer
+                            experience. The project involved creating intuitive navigation, optimizing mobile
+                            responsiveness, and enhancing the visual layout to align with the company's brand identity.
+                        </p>
+                        <p class="paragraphLarge">2024</p>
+                    </div>
+                    <button class="primaryButton" id="all-projects-button">
+                        <p>All projects</p>
+                        <img src="./images/arrow_down.svg" alt="download">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+        </div>
+        <div class="summary">
+        </div>
+        <div class="experience">
+        </div>
+        <div class="education">
+        </div>
+        <div class="contacts">
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
