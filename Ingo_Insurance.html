@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingo Insurance</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+    <aside class="aside">
+        <button id="closeOverlayFromIframe" class="primaryButton"><img src="./images/Arrow left.svg"
+                alt="Arrow left">Back to projects</button>
+        <div>
+            <h2 class="heading-md">INGO Insurance</h2>
+            <p class="paragraph">In this comprehensive redesign, my goal was to enhance both the functionality and
+                aesthetic of the insurance company's website, transforming it into a modern, user-centric digital
+                platform. The project spanned several areas, from creating a streamlined product page to implementing a
+                consistent design system and developing an intuitive personal cabinet. Each aspect of the redesign was
+                aimed at improving the user experience, increasing engagement, and aligning the visual identity with the
+                company's brand.</p>
+        </div>
+
+    </aside>
+    <main class="main">
+        <div class="section" id="section-1">
+            <div class="projectImages">
+                <div>
+                    <img src="./images/ingo-slide1.webp" alt="Ingo image 1" class="projectImage">
+                </div>
+                <div>
+                    <img src="./videos/car_insurance_rec.gif" alt="Car insurance video" class="projectImage">
+                </div>
+                <div>
+                    <img src="./images/mobile-preview.webp" alt="Ingo image 3" class="projectImage">
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section-2">
+
+        </div>
+    </main>
+
+
+    <script>
+        document.getElementById("closeOverlayFromIframe").addEventListener("click", () => {
+            window.parent.document.getElementById("closeOverlay").click();
+        });
+    </script>
+</body>
+
+</html>
