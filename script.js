@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'section-3': {
             title: 'PERSONAL CABINET',
-            description: 'The personal cabinet was designed to provide users with an intuitive and secure way to manage their policies, make payments, and access documents. Key features include a user-friendly interface, responsive design for mobile access, and streamlined workflows for ease of use. The design ensures that users can perform essential tasks efficiently, enhancing customer satisfaction and engagement.'
+            description: 'The personal cabinet section underwent a full redesign to create a more intuitive and efficient experience for users managing their insurance policies. This secure area allows users to view policy details, make payments, file claims, and update personal information. I focused on user-centered design principles, ensuring that actions like updating policy details or filing a claim are easy to complete with minimal friction. Microinteractions and animations were incorporated to provide feedback on user actions (e.g., saving changes or submitting forms), offering a smoother, more interactive experience.'
         }
     };
 

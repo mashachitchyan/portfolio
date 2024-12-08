@@ -205,3 +205,20 @@ iframe {
     margin-left: auto;
     margin-right: auto;
 }
+
+#section-3::before {
+    content: '';
+    display: block; /* Makes it act as a block element */
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-transparent-30);
+    margin-bottom: var(--spacing-8x);
+    margin-top: var(--spacing-4x);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#section-3 .projectImage {
+    height: 93vh;   
+    object-fit: cover;
+}
