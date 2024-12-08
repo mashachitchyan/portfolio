@@ -247,11 +247,12 @@ document.addEventListener("DOMContentLoaded", () => {
             "Insurance company website redesign with a focus on improving customer experience. The project involved creating intuitive navigation, optimizing mobile responsiveness, and enhancing the visual layout to align with the company's brand identity.",
             "In a rapidly evolving business landscape, effective Customer Relationship Management (CRM) platforms are indispensable. This project aims to revamp an existing CRM platform, enriching its features and enhancing user experience across both web and mobile platforms.",
             "A user-friendly finance tracking app designed to empower individuals and businesses to effectively manage their finances. The visually appealing interface simplifies financial management, while providing insightful analytics and personalized recommendations.",
+            "Keeping track of personal finances can be a challenge, leading to overspending and financial stress. To address this issue, a finance tracking application helps users take control of their finances by providing an easy and accessible tool to monitor their spendings and savings."
         ];
 
         projectSummary.textContent = projectSummaries[currentPage];
 
-        const projectYears = [2024, 2024, 2023];
+        const projectYears = [2024, 2024, 2023, 2023];
 
         projectYear.textContent = projectYears[currentPage];
     }
@@ -279,6 +280,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const openOverlay1 = document.getElementById("openOverlay1");
     const openOverlay2 = document.getElementById("openOverlay2");
     const openOverlay3 = document.getElementById("openOverlay3");
+    const openOverlay4 = document.getElementById("openOverlay4");
+
 
     openOverlay1.addEventListener("click", () => {
         overlay.style.display = "flex";
@@ -295,6 +298,12 @@ document.addEventListener("DOMContentLoaded", () => {
     openOverlay3.addEventListener('click', () => {
         overlay.style.display = "flex";
         overlayFrame.src = "3.Design_system.html";
+        closeOverlay.style.display = "none";
+    })
+
+    openOverlay4.addEventListener('click', () => {
+        overlay.style.display = "flex";
+        overlayFrame.src = "4.Finance_App.html";
         closeOverlay.style.display = "none";
     })
 
