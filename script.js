@@ -296,28 +296,48 @@ document.addEventListener("DOMContentLoaded", () => {
 // Aside text change 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const section2 = document.getElementById('section-2');
     const aside = document.querySelector('.aside');
 
-    if (section2) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    aside.querySelector('h2').textContent = 'DESIGN SYSTEM';
-                    aside.querySelector('p').textContent = 'I developed a robust, scalable design system to ensure a unified and cohesive look across all pages of the site. This system serves as a blueprint for all future updates, creating a set of reusable components that adhere to the company brand guidelines.Atomic design principles were used to create modular components (e.g., buttons, form fields, navigation bars), allowing for easy scaling and modification as the site evolves.Consistent typography, color palettes, and iconography were integrated to reinforce brand identity while maintaining visual clarity and ease of use.';
-                } else {
-                    aside.querySelector('h2').textContent = 'INGO Insurance';
-                    aside.querySelector('p').textContent = 'In this comprehensive redesign, my goal was to enhance both the functionality and aesthetic of the insurance company\'s website, transforming it into a modern, user-centric digital platform. The project spanned several areas, from creating a streamlined product page to implementing a consistent design system and developing an intuitive personal cabinet. Each aspect of the redesign was aimed at improving the user experience, increasing engagement, and aligning the visual identity with the company\'s brand.';
-                }
-            });
-        }, {
-            threshold: [0.3, 0.5]
-        });
+    // Define a mapping of section IDs to their corresponding text content
+    const sections = {
+        'section-1': {
+            title: 'INGO Insurance',
+            description: 'In this comprehensive redesign, my goal was to enhance both the functionality and aesthetic of the insurance company\'s website, transforming it into a modern, user-centric digital platform. The project spanned several areas, from creating a streamlined product page to implementing a consistent design system and developing an intuitive personal cabinet. Each aspect of the redesign was aimed at improving the user experience, increasing engagement, and aligning the visual identity with the company\'s brand.'
+        },
+        'section-2': {
+            title: 'DESIGN SYSTEM',
+            description: 'I developed a robust, scalable design system to ensure a unified and cohesive look across all pages of the site. This system serves as a blueprint for all future updates, creating a set of reusable components that adhere to the company brand guidelines. Atomic design principles were used to create modular components (e.g., buttons, form fields, navigation bars), allowing for easy scaling and modification as the site evolves. Consistent typography, color palettes, and iconography were integrated to reinforce brand identity while maintaining visual clarity and ease of use.'
+        },
+        'section-3': {
+            title: 'PERSONAL CABINET',
+            description: 'The personal cabinet was designed to provide users with an intuitive and secure way to manage their policies, make payments, and access documents. Key features include a user-friendly interface, responsive design for mobile access, and streamlined workflows for ease of use. The design ensures that users can perform essential tasks efficiently, enhancing customer satisfaction and engagement.'
+        }
+    };
 
-        observer.observe(section2);
-    } else {
-        console.log('section-2 element not found!');
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const sectionId = entry.target.id;
+                const { title, description } = sections[sectionId] || {};
+                if (title && description) {
+                    aside.querySelector('h2').textContent = title;
+                    aside.querySelector('p').textContent = description;
+                }
+            }
+        });
+    }, {
+        threshold: [0.3, 0.5] // Trigger when 50% of the section is in view
+    });
+
+    // Observe all sections dynamically
+    Object.keys(sections).forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            observer.observe(section);
+        } else {
+            console.log(`Section with ID "${sectionId}" not found!`);
+        }
+    });
 });
 
 
