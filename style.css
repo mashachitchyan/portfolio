@@ -683,6 +683,27 @@ button {
     width: 100%;
 }
 
+.primaryButtonMobile {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; 
+    text-align: center;
+    background-color: transparent;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: var(--spacing-2x) var(--spacing-4x);
+    margin: var(--spacing-8x) 0 0 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-button);
+    font-family: var(--font-family-button);
+}
+
+.primaryButtonMobile:hover {
+    background-color: var(--secondary-transparent-30);
+    border: 1px solid var(--secondary-transparent-0);
+   }
+
 /* Slider end */
 
 .nameLogo {
@@ -958,7 +979,7 @@ button {
         max-height: fit-content;
         overflow: scroll;
     }
-    
+
     .gridContainer {
         display: grid;
         grid-template-rows: auto;
@@ -1114,7 +1135,6 @@ button {
         background-color: var(--secondary-transparent-30);
         border: 1px solid var(--secondary-transparent-0);
        }
-
     
 }
 
