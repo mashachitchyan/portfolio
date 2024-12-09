@@ -225,10 +225,10 @@ document.addEventListener("DOMContentLoaded", function () {
       '--backgrounf-color': '#101010',
       '--secondary-color': '#CCC9BB',
       '--background-color': '#101010',
-      '--text-color': '#CCC9Bð'
+      '--text-color': '#CCC9BB'
     },
     {
-      '--primary-color': '#C9C9C9',
+      '--primary-color': '#C9C',
       '--secondary-color': '#474742',
       '--background-color': '#C9C9C9',
       '--text-color': '#474742'
