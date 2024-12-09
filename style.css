@@ -701,6 +701,14 @@ button {
     text-transform: uppercase;
 }
 
+#phone-number {
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-paragraph);
+    text-decoration: none;
+    text-transform: none;
+    color: var(--secondary-color);
+}
+
 .header {
     background-color: var(--background-color);
     display: flex;
