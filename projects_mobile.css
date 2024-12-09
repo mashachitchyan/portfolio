@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "Antonio-Regular.ttf";
+    src: url(./fonts/Antonio-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata_Condensed-Bold.ttf";
+    src: url(./fonts/Inconsolata_Condensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata_Condensed-Regular.ttf";
+    src: url(./fonts/Inconsolata_Condensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata_Condensed-SemiBold.ttf";
+    src: url(./fonts/Inconsolata_Condensed-SemiBold.ttf);
+}
+
+:root {
+    /* colors */
+    --background-color: #101010;
+    --secondary-color: #CCC9BB;
+    --primary-gradient: linear-gradient(90deg, hsl(0, 0%, 9%), var(--background-color));
+    --secondary-transparent-60: rgba(204, 201, 187, 0.6);
+    --secondary-transparent-30: rgba(204, 201, 187, 0.3);
+    --secondary-transparent-0: rgba(204, 201, 187, 0.01);
+    --primary-transparent-30: rgba(16, 16, 16, 0.3);
+    /* spacing */
+    --spacing-1x: 0.25rem;
+    --spacing-2x: 0.5rem;
+    --spacing-3x: 0.75rem;
+    --spacing-4x: 1rem;
+    --spacing-5x: 1.25rem;
+    --spacing-6x: 1.5rem;
+    --spacing-8x: 2rem;
+    --spacing-10x: 2.25rem;
+    --spacing-12x: 3rem;
+    --spacing-14x: 4rem;
+    --spacing-17x: 4.25rem;
+    --spacing-20x: 5rem;
+    --spacing-26x: 6.5rem;
+    /* border-radius */
+    --border-radius-sm: 6px;
+    /* typography */
+    --font-size-heading-lg: 2rem;
+    --font-size-heading-md: 1.75rem;
+    --font-size-paragraph: 1.1rem;
+    --font-size-paragraph-lg: 1.25rem;
+    --font-size-button: 1.15rem;
+    --font-size-accent: 10rem;
+    --font-family-heading: "Antonio-Regular.ttf";
+    --font-family-paragraph: "Inconsolata_Condensed-Regular.ttf";
+    --font-family-button: "Inconsolata_Condensed-Semibold.ttf";
+    --font-family-paragraph-bold: "Inconsolata_Condensed-Bold.ttf";
+    /* transitions */
+    --transition-duration: 0.4s;
+    --transition-function: ease-out;
+    --transition-delay: 400ms;
+
+    /* define light mode variables here and then use classes to apply them with javascript */
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    overflow: hidden scroll;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    grid-row: 1;
+}
+
+.primaryButton {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-2x);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--secondary-color);
+    font-family: var(--font-family-button);
+    font-size: var(--font-size-button);
+    color: var(--secondary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: var(--spacing-2x) var(--spacing-4x);
+    border-radius: var(--border-radius-sm);
+    width: fit-content;
+    height: fit-content;
+    transition: var(--transition-duration);
+}
+
+.primaryButton:hover {
+    background-color: var(--secondary-transparent-30);
+    border: 1px solid var(--secondary-transparent-0);
+}
+
+.heading-md {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-heading-md);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.paragraph {
+    font-family: var(--font-family-paragraph);
+    font-size: var(--font-size-paragraph);
+    color: var(--secondary-color);
+}
+
+.projectContainer {
+    padding: 0 1rem 0 1rem;
+}
+
+.projectImages {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2x);
+}
+
+
+.projectImage {
+    width: 100%;
+    min-height: 30vh;
+    max-height: 50vh;
+    object-fit: cover;
+    border-radius: var(--spacing-2x);
+    margin-bottom: var(--spacing-4x);
+}
+
+#section-3 .projectImage {
+    object-position: top;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    grid-row: 1;
+    position: sticky;
+    top: 0px;
+    background-color: var(--background-color);
+    width: 100%;
+}
+
+@media (max-width: 1079px) and (min-width:769px) {
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    grid-row: 1;
+    position: sticky;
+    background-color: var(--background-color);
+}
+
+.projectContainer {
+    padding: 0 2rem 0 2rem;
+}
+
+}

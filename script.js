@@ -281,6 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const openOverlay2 = document.getElementById("openOverlay2");
     const openOverlay3 = document.getElementById("openOverlay3");
     const openOverlay4 = document.getElementById("openOverlay4");
+    
 
 
     openOverlay1.addEventListener("click", () => {
@@ -311,5 +312,6 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.display = "none";
         overlayFrame.src = "";
     });
+    
 });
 

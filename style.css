@@ -740,7 +740,6 @@ button {
     cursor: pointer;
 }
 
-
 @media (max-width: 1280px) and (min-width: 1080px) {
     @font-face {
         font-family: "Antonio-Regular.ttf";
@@ -841,6 +840,42 @@ button {
         width: fit-content;
         border-radius: var(--border-radius-sm);
     }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: var(--spacing-6x);
+        margin-right: var(--spacing-5x);
+    }
+    
+    .buttons .primaryButton {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .primaryButtonMobile {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; 
+        text-align: center;
+        background-color: transparent;
+        color: var(--secondary-color);
+        text-decoration: none;
+        padding: var(--spacing-2x) var(--spacing-4x);
+        margin: var(--spacing-8x) 0 0 0;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius-sm);
+        font-size: var(--font-size-button);
+        font-family: var(--font-family-button);
+    }
+    
+    .primaryButtonMobile:hover {
+        background-color: var(--secondary-transparent-30);
+        border: 1px solid var(--secondary-transparent-0);
+       }
+    
 }
 
 
@@ -923,8 +958,7 @@ button {
         max-height: fit-content;
         overflow: scroll;
     }
-
-
+    
     .gridContainer {
         display: grid;
         grid-template-rows: auto;
@@ -942,7 +976,7 @@ button {
     .header {
         display: flex;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 2rem;
         align-items: center;
         grid-row: 1;
     }
@@ -1059,6 +1093,29 @@ button {
         gap: var(--spacing-10x);
         margin-top: var(--spacing-4x);
     }
+
+    .primaryButtonMobile {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; 
+        text-align: center;
+        background-color: transparent;
+        color: var(--secondary-color);
+        text-decoration: none;
+        padding: var(--spacing-2x) var(--spacing-4x);
+        margin: var(--spacing-8x) 0 0 0;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius-sm);
+        font-size: var(--font-size-button);
+        font-family: var(--font-family-button);
+    }
+    
+    .primaryButtonMobile:hover {
+        background-color: var(--secondary-transparent-30);
+        border: 1px solid var(--secondary-transparent-0);
+       }
+
+    
 }
 
 @media (max-width: 768px) {
@@ -1146,7 +1203,6 @@ button {
         grid-template-columns: auto;
         width: 100%;
     }
-
 
     .mobile {
         display: grid;
@@ -1273,4 +1329,25 @@ button {
         gap: var(--spacing-10x);
         margin-top: var(--spacing-4x);
     }
+
+    .primaryButtonMobile {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; 
+        text-align: center;
+        background-color: transparent;
+        color: var(--secondary-color);
+        text-decoration: none;
+        padding: var(--spacing-2x) var(--spacing-4x);
+        margin: var(--spacing-8x) 0 0 0;
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius-sm);
+        font-size: var(--font-size-button);
+        font-family: var(--font-family-button);
+    }
+    
+    .primaryButtonMobile:hover {
+        background-color: var(--secondary-transparent-30);
+        border: 1px solid var(--secondary-transparent-0);
+       }
 }
