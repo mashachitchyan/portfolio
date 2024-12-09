@@ -216,6 +216,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Mode switcher functionality 
+
+  let themeIndex = 0;
+
+  const themes = [
+    {
+      '--backgrounf-color': '#101010',
+      '--secondary-color': '#CCC9BB',
+      '--background-color': '#101010',
+      '--text-color': '#CCC9Bð'
+    },
+    {
+      '--primary-color': '#C9C9C9',
+      '--secondary-color': '#474742',
+      '--background-color': '#C9C9C9',
+      '--text-color': '#474742'
+    },
+    {
+      '--primary-color': '#8e44ad',
+      '--secondary-color': '#f1c40f',
+      '--background-color': '#34495e',
+      '--text-color': '#ecf0f1'
+    }
+  ];
+
+  modeSwitcher.addEventListener('click', () => {
+    const theme = themes[themeIndex];
+    Object.keys(theme).forEach(key => {
+      document.documentElement.style.setProperty(key, theme[key]);
+    });
+
+    themeIndex = (themeIndex + 1) % themes.length;  // Cycle through the themes
+  });
+
+
 // Projects slider 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -339,6 +374,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
 
 
 
