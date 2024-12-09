@@ -220,6 +220,7 @@ body {
 
 .transparent {
     opacity: 0.6;
+    z-index: 1;
 }
 
 .navButtons {
@@ -686,7 +687,7 @@ button {
 .primaryButtonMobile {
     display: block;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     text-align: center;
     background-color: transparent;
     color: var(--secondary-color);
@@ -700,18 +701,21 @@ button {
 }
 
 .header {
+    background-color: var(--background-color);
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     align-items: center;
     position: sticky;
+    top: 0;
     grid-row: 1;
+    z-index: 9999;
 }
 
 .primaryButtonMobile:hover {
     background-color: var(--secondary-transparent-30);
     border: 1px solid var(--secondary-transparent-0);
-   }
+}
 
 /* Slider end */
 
@@ -769,6 +773,79 @@ button {
     border: none;
     cursor: pointer;
 }
+
+/* Nav overlay test */
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.nav-overlay nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-overlay nav ul li {
+    margin: 20px 0;
+}
+
+.nav-overlay nav ul li a {
+    color: var(--secondary-color);
+    font-size: var(--font-size-heading-md);
+    font-family: var(--font-family-heading);
+    text-decoration: none;
+    font-family: var(--font-family-heading);
+    transition: color 0.3s ease;
+}
+
+.nav-overlay nav ul li a:hover {
+    color: #ddd;
+}
+
+#menu-toggle {
+    cursor: pointer;
+}
+
+#menu-toggle-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--spacing-6x);
+    cursor: pointer;
+}
+
+    /* Line animation to transform into an 'X' */
+    .menu.open .line:nth-child(1) {
+        transform: rotate(25deg);
+        position: relative;
+        top: 6px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu.open .line:nth-child(2) {
+        transform: rotate(-25deg);
+        position: relative;
+        bottom: 4px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu.open .line:nth-child(3) {
+        opacity: 0;
+    }
+
+/* test end */
 
 @media (max-width: 1280px) and (min-width: 1080px) {
     @font-face {
@@ -879,7 +956,7 @@ button {
         gap: var(--spacing-6x);
         margin-right: var(--spacing-5x);
     }
-    
+
     .buttons .primaryButton {
         display: inline-block;
         width: 100%;
@@ -888,7 +965,7 @@ button {
     .primaryButtonMobile {
         display: block;
         width: 100%;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         text-align: center;
         background-color: transparent;
         color: var(--secondary-color);
@@ -900,12 +977,12 @@ button {
         font-size: var(--font-size-button);
         font-family: var(--font-family-button);
     }
-    
+
     .primaryButtonMobile:hover {
         background-color: var(--secondary-transparent-30);
         border: 1px solid var(--secondary-transparent-0);
-       }
-    
+    }
+
 }
 
 
@@ -1004,12 +1081,15 @@ button {
     }
 
     .header {
+        background-color: var(--background-color);
         display: flex;
         justify-content: space-between;
         padding: 2rem;
         align-items: center;
         position: sticky;
+        top: 0;
         grid-row: 1;
+        z-index: 9999;
     }
 
     .menu {
@@ -1128,7 +1208,7 @@ button {
     .primaryButtonMobile {
         display: block;
         width: 100%;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         text-align: center;
         background-color: transparent;
         color: var(--secondary-color);
@@ -1140,12 +1220,20 @@ button {
         font-size: var(--font-size-button);
         font-family: var(--font-family-button);
     }
-    
+
     .primaryButtonMobile:hover {
         background-color: var(--secondary-transparent-30);
         border: 1px solid var(--secondary-transparent-0);
-       }
-    
+    }
+
+
+    /* test */
+
+    .nav-overlay nav ul li a {
+        font-size: 30px;
+    }
+
+    /* test end */
 }
 
 @media (max-width: 768px) {
@@ -1241,12 +1329,15 @@ button {
     }
 
     .header {
+        background-color: var(--background-color);
         display: flex;
         justify-content: space-between;
         padding: 1rem;
         align-items: center;
         position: sticky;
+        top: 0;
         grid-row: 1;
+        z-index: 9999;
     }
 
     .menu {
@@ -1263,7 +1354,7 @@ button {
     }
 
     .logo {
-        max-width: 35vw;
+        width: 35vw;
     }
 
     .about-me-mobile {
@@ -1364,7 +1455,7 @@ button {
     .primaryButtonMobile {
         display: block;
         width: 100%;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         text-align: center;
         background-color: transparent;
         color: var(--secondary-color);
@@ -1376,9 +1467,15 @@ button {
         font-size: var(--font-size-button);
         font-family: var(--font-family-button);
     }
-    
+
     .primaryButtonMobile:hover {
         background-color: var(--secondary-transparent-30);
         border: 1px solid var(--secondary-transparent-0);
-       }
+    }
+}
+
+@media (max-width: 586px) {
+    .logo {
+        width: 50vw;
+    }
 }

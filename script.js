@@ -312,6 +312,34 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.style.display = "none";
         overlayFrame.src = "";
     });
-    
+
 });
+
+
+
+// nav overlay test 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menu = document.getElementById("menu-toggle");
+    const navOverlay = document.getElementById("nav-overlay");
+
+    // Toggle the burger icon and the overlay when clicked
+    const toggleMenu = () => {
+        menu.classList.toggle("open");
+        navOverlay.style.display = navOverlay.style.display === "flex" ? "none" : "flex";
+    };
+
+    menu.addEventListener("click", toggleMenu);
+
+    // Close the overlay when any link is clicked
+    navOverlay.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navOverlay.style.display = "none";
+            menu.classList.remove("open");
+        });
+    });
+});
+
+
+
 
