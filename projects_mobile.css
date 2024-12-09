@@ -69,13 +69,13 @@ body {
     overflow: hidden scroll;
 }
 
-.header {
+/* .header {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
     grid-row: 1;
-}
+} */
 
 .primaryButton {
     display: flex;

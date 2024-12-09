@@ -999,6 +999,7 @@ button {
         justify-content: space-between;
         padding: 2rem;
         align-items: center;
+        position: sticky;
         grid-row: 1;
     }
 
@@ -1235,6 +1236,7 @@ button {
         justify-content: space-between;
         padding: 1rem;
         align-items: center;
+        position: sticky;
         grid-row: 1;
     }
 
