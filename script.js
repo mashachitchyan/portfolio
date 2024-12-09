@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const projectSummaries = [
             "Insurance company website redesign with a focus on improving customer experience. The project involved creating intuitive navigation, optimizing mobile responsiveness, and enhancing the visual layout to align with the company's brand identity.",
             "In a rapidly evolving business landscape, effective Customer Relationship Management (CRM) platforms are indispensable. This project aims to revamp an existing CRM platform, enriching its features and enhancing user experience across both web and mobile platforms.",
-            "A user-friendly finance tracking app designed to empower individuals and businesses to effectively manage their finances. The visually appealing interface simplifies financial management, while providing insightful analytics and personalized recommendations.",
+            "A comprehensive framework developed to streamline the UI design process and ensure consistency, efficiency, and scalability across all digital products and platforms.",
             "Keeping track of personal finances can be a challenge, leading to overspending and financial stress. To address this issue, a finance tracking application helps users take control of their finances by providing an easy and accessible tool to monitor their spendings and savings."
         ];
 
