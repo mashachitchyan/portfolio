@@ -26,6 +26,7 @@
     --secondary-transparent-60: rgba(204, 201, 187, 0.6);
     --secondary-transparent-30: rgba(204, 201, 187, 0.3);
     --secondary-transparent-0: rgba(204, 201, 187, 0.01);
+    --accent-color: #CCC9BB;
     /* spacing */
     --spacing-1x: 0.25rem;
     --spacing-2x: 0.5rem;
@@ -77,7 +78,7 @@ body {
 .heading-lg {
     font-family: var(--font-family-heading);
     font-size: var(--font-size-heading-lg);
-    color: var(--secondary-color);
+    color: var(--accent-color);
     text-transform: uppercase;
 }
 
@@ -155,6 +156,10 @@ body {
     color: var(--background-color);
 }
 
+.accent {
+    color: var(--accent-color);
+}
+
 .secondaryButton {
     font-family: var(--font-family-button);
     font-size: var(--font-size-paragraph);
@@ -212,7 +217,7 @@ body {
 .accentText {
     font-size: var(--font-size-accent);
     font-family: var(--font-family-heading);
-    color: var(--secondary-color);
+    color: var(--accent-color);
     text-transform: uppercase;
     margin-block: 0px;
     /* line-height: var(--spacing-8x); */
@@ -256,10 +261,16 @@ button {
     padding: 0;
     margin: 0;
     transition: var(--transition-duration);
+    fill: var(--secondary-color);
 }
 
 #modeSwitcher.rotated {
     rotate: 180deg;
+    fill: var(--accent-color);
+}
+
+path {
+    fill: var(--secondary-color);
 }
 
 .content {
@@ -732,7 +743,7 @@ button {
 .nameLogo {
     font-family: var(--font-family-heading);
     font-size: var(--spacing-17x);
-    color: var(--secondary-color);
+    color: var(--accent-color);
     margin-top: var(--spacing-2x);
     margin-bottom: var(--spacing-1x);
 }
@@ -834,26 +845,26 @@ button {
     cursor: pointer;
 }
 
-    /* Line animation to transform into an 'X' */
-    .menu.open .line:nth-child(1) {
-        transform: rotate(25deg);
-        position: relative;
-        top: 6px;
-        align-items: center;
-        justify-content: center;
-    }
+/* Line animation to transform into an 'X' */
+.menu.open .line:nth-child(1) {
+    transform: rotate(25deg);
+    position: relative;
+    top: 6px;
+    align-items: center;
+    justify-content: center;
+}
 
-    .menu.open .line:nth-child(2) {
-        transform: rotate(-25deg);
-        position: relative;
-        bottom: 4px;
-        align-items: center;
-        justify-content: center;
-    }
+.menu.open .line:nth-child(2) {
+    transform: rotate(-25deg);
+    position: relative;
+    bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
 
-    .menu.open .line:nth-child(3) {
-        opacity: 0;
-    }
+.menu.open .line:nth-child(3) {
+    opacity: 0;
+}
 
 /* test end */
 
