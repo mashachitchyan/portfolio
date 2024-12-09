@@ -698,6 +698,7 @@ button {
     border-radius: var(--border-radius-sm);
     font-size: var(--font-size-button);
     font-family: var(--font-family-button);
+    text-transform: uppercase;
 }
 
 .header {
@@ -897,7 +898,7 @@ button {
         --font-size-heading-md: 1.5rem;
         --font-size-paragraph: 1rem;
         --font-size-paragraph-lg: 1.15rem;
-        --font-size-button: 1rem;
+        --font-size-button: 1.15rem;
         --font-size-accent: 7rem;
         --font-family-heading: "Antonio-Regular.ttf";
         --font-family-paragraph: "Inconsolata_Condensed-Regular.ttf";
@@ -1038,7 +1039,7 @@ button {
         --font-size-heading-md: 1.25rem;
         --font-size-paragraph: 1rem;
         --font-size-paragraph-lg: 1.1rem;
-        --font-size-button: 1rem;
+        --font-size-button: 1.15rem;
         --font-size-accent: 7rem;
         --font-family-heading: "Antonio-Regular.ttf";
         --font-family-paragraph: "Inconsolata_Condensed-Regular.ttf";
@@ -1286,7 +1287,7 @@ button {
         --font-size-heading-md: 1.25rem;
         --font-size-paragraph: 1rem;
         --font-size-paragraph-lg: 1.1rem;
-        --font-size-button: 1rem;
+        --font-size-button: 1.15rem;
         --font-size-accent: 7rem;
         --font-family-heading: "Antonio-Regular.ttf";
         --font-family-paragraph: "Inconsolata_Condensed-Regular.ttf";
