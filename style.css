@@ -1145,7 +1145,7 @@ path {
     .line {
         height: 2px;
         width: 28px;
-        background-color: #CCC9BB;
+        background-color: var(--secondary-color);
         border-radius: 20px;
     }
 
@@ -1370,6 +1370,7 @@ path {
         display: grid;
         grid-template-rows: 80px repeat(7, auto);
         grid-template-columns: 1fr;
+        --is-mobile-layout: true;
     }
 
     .header {
@@ -1393,7 +1394,7 @@ path {
     .line {
         height: 2px;
         width: 28px;
-        background-color: #CCC9BB;
+        background-color: var(--secondary-color);
         border-radius: 20px;
     }
 

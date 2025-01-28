@@ -153,10 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollCooldown = 1500; 
 
     window.addEventListener('wheel', (event) => {
-        // Check if window width is in desktop mode (not responsive/mobile layout)
-        const isDesktopMode = window.innerWidth >= 768; // Adjust this breakpoint to match your CSS
+        // Check if we're in mobile layout
+        const isMobileLayout = document.querySelector('.mobile') !== null;
+        const isDesktopMode = window.innerWidth >= 768;
 
-        if (!isDesktopMode) {
+        if (isMobileLayout || !isDesktopMode) {
             document.body.style.overflow = 'auto';
             return;
         }
@@ -193,9 +194,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle window resize
     window.addEventListener('resize', () => {
+        const isMobileLayout = document.querySelector('.mobile') !== null;
         const isDesktopMode = window.innerWidth >= 768;
-        document.body.style.overflow = isDesktopMode ? 'hidden' : 'auto';
+
+        if (isMobileLayout || !isDesktopMode) {
+            document.body.style.overflow = 'auto';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
     });
+
+    // Initial state
+    const isMobileLayout = document.querySelector('.mobile') !== null;
+    const isDesktopMode = window.innerWidth >= 768;
+    document.body.style.overflow = (isMobileLayout || !isDesktopMode) ? 'auto' : 'hidden';
 });
 
 
