@@ -153,11 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollCooldown = 1500; 
 
     window.addEventListener('wheel', (event) => {
-        // Check if we're in mobile layout
-        const isMobileLayout = document.querySelector('.mobile') !== null;
-        const isDesktopMode = window.innerWidth >= 768;
+        console.log('Wheel event triggered');
 
-        if (isMobileLayout || !isDesktopMode) {
+        const isMobileWidth = window.innerWidth < 768;
+        console.log('Mobile width:', isMobileWidth);
+
+        if (isMobileWidth) {
             document.body.style.overflow = 'auto';
             return;
         }
@@ -165,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentTime = Date.now();
         
         if (isScrolling || currentTime - lastScrollTime < scrollCooldown) {
+            console.log('Scrolling blocked by cooldown');
             return;
         }
 
@@ -175,11 +177,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const navItems = Array.from(document.querySelectorAll('.navItem'));
         const currentIndex = navItems.indexOf(currentActive);
 
+        console.log('Current active:', currentActive);
+        console.log('Nav items:', navItems);
+        console.log('Current index:', currentIndex);
+
         if (event.deltaY > 0) {
+            console.log('Scrolling down');
             if (currentIndex < navItems.length - 1) {
                 navItems[currentIndex + 1].click();
             }
         } else {
+            console.log('Scrolling up');
             if (currentIndex > 0) {
                 navItems[currentIndex - 1].click();
             }
@@ -194,20 +202,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle window resize
     window.addEventListener('resize', () => {
-        const isMobileLayout = document.querySelector('.mobile') !== null;
-        const isDesktopMode = window.innerWidth >= 768;
-
-        if (isMobileLayout || !isDesktopMode) {
-            document.body.style.overflow = 'auto';
-        } else {
-            document.body.style.overflow = 'hidden';
-        }
+        const isMobileWidth = window.innerWidth < 768;
+        document.body.style.overflow = isMobileWidth ? 'auto' : 'hidden';
     });
 
     // Initial state
-    const isMobileLayout = document.querySelector('.mobile') !== null;
-    const isDesktopMode = window.innerWidth >= 768;
-    document.body.style.overflow = (isMobileLayout || !isDesktopMode) ? 'auto' : 'hidden';
+    const isMobileWidth = window.innerWidth < 768;
+    document.body.style.overflow = isMobileWidth ? 'auto' : 'hidden';
 });
 
 
