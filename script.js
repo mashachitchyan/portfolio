@@ -147,6 +147,42 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsButton.click();
     })
 
+    // Scroll navigation
+    let isScrolling = false;
+    let lastScrollTime = Date.now();
+    const scrollCooldown = 1500; 
+
+    window.addEventListener('wheel', (event) => {
+        const currentTime = Date.now();
+        
+        if (isScrolling || currentTime - lastScrollTime < scrollCooldown) {
+            return;
+        }
+
+        isScrolling = true;
+        lastScrollTime = currentTime;
+
+        const currentActive = document.querySelector('.navItem.selected');
+        const navItems = Array.from(document.querySelectorAll('.navItem'));
+        const currentIndex = navItems.indexOf(currentActive);
+
+  
+        if (event.deltaY > 0) {
+            if (currentIndex < navItems.length - 1) {
+                navItems[currentIndex + 1].click();
+            }
+        } else {
+            if (currentIndex > 0) {
+                navItems[currentIndex - 1].click();
+            }
+        }
+
+        setTimeout(() => {
+            isScrolling = false;
+        }, scrollCooldown);
+    });
+
+    document.body.style.overflow = 'hidden';
 });
 
 
