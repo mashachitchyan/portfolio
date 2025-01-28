@@ -153,6 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollCooldown = 1500; 
 
     window.addEventListener('wheel', (event) => {
+        // Check if window width is in desktop mode (not responsive/mobile layout)
+        const isDesktopMode = window.innerWidth >= 768; // Adjust this breakpoint to match your CSS
+
+        if (!isDesktopMode) {
+            document.body.style.overflow = 'auto';
+            return;
+        }
+
         const currentTime = Date.now();
         
         if (isScrolling || currentTime - lastScrollTime < scrollCooldown) {
@@ -166,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const navItems = Array.from(document.querySelectorAll('.navItem'));
         const currentIndex = navItems.indexOf(currentActive);
 
-  
         if (event.deltaY > 0) {
             if (currentIndex < navItems.length - 1) {
                 navItems[currentIndex + 1].click();
@@ -180,9 +187,15 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             isScrolling = false;
         }, scrollCooldown);
+
+        document.body.style.overflow = 'hidden';
     });
 
-    document.body.style.overflow = 'hidden';
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        const isDesktopMode = window.innerWidth >= 768;
+        document.body.style.overflow = isDesktopMode ? 'hidden' : 'auto';
+    });
 });
 
 
