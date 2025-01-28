@@ -273,22 +273,28 @@ const themes = [
     {
         '--background-color': '#101010',
         '--secondary-color': '#CCC9BB',
+        '--primary-color': '#CCC9BB',
+        '--svg-color': '#CCC9BB',
         '--primary-gradient': 'linear-gradient(90deg, hsl(0, 0%, 9%), #101010)',
         '--secondary-transparent-60': 'rgba(204, 201, 187, 0.6)',
         '--secondary-transparent-30': 'rgba(204, 201, 187, 0.3)',
         '--secondary-transparent-0': 'rgba(204, 201, 187, 0.01)',
         '--primary-transparent-30': 'rgba(16, 16, 16, 0.3)',
-        '--accent-color': '#CCC9BB'
+        '--accent-color': '#CCC9BB',
+        '--svg-filter': 'invert(90%) sepia(8%) saturate(101%) hue-rotate(356deg) brightness(92%) contrast(90%)',
     },
     {
         '--background-color': '#C9C9C9',
         '--secondary-color': '#474742',
+        '--primary-color': '#474742',
+        '--svg-color': '#474742',
         '--primary-gradient': 'linear-gradient(90deg, rgba(71, 71, 66, 0.1), #C9C9C9)',
         '--secondary-transparent-60': 'rgba(71, 71, 66, 0.6)',
         '--secondary-transparent-30': 'rgba(71, 71, 66, 0.3)',
         '--secondary-transparent-0': 'rgba(71, 71, 66, 0.01)',
         '--primary-transparent-30': 'rgba(46, 46, 46, 0.3)',
-        '--accent-color': '#E16251' // Additional accent color for the second theme
+        '--accent-color': '#E16251',
+        '--svg-filter': 'invert(28%) sepia(3%) saturate(453%) hue-rotate(201deg) brightness(94%) contrast(87%)',
     }
 ];
 
@@ -298,13 +304,14 @@ function applyTheme(index) {
     Object.keys(theme).forEach(key => {
         document.documentElement.style.setProperty(key, theme[key]);
     });
-    localStorage.setItem('themeIndex', index); // Save the current theme index to localStorage
+    document.body.setAttribute('data-theme', index === 0 ? 'dark' : 'light');
+    localStorage.setItem('themeIndex', index);
 }
 
 // On page load, check and apply the saved theme
 window.addEventListener('DOMContentLoaded', () => {
     const savedThemeIndex = localStorage.getItem('themeIndex');
-    themeIndex = savedThemeIndex !== null ? parseInt(savedThemeIndex, 10) : 0; // Default to 0 if no theme is saved
+    themeIndex = savedThemeIndex !== null ? parseInt(savedThemeIndex, 10) : 0;
     applyTheme(themeIndex);
 });
 

@@ -62,6 +62,29 @@
     /* define light mode variables here and then use classes to apply them with javascript */
 }
 
+/* SVG Theme Colors */
+.theme-svg {
+    color: var(--secondary-color);
+}
+
+img.theme-svg {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(8%) saturate(101%) hue-rotate(356deg) brightness(92%) contrast(90%);
+}
+
+[data-theme="light"] img.theme-svg {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(3%) saturate(453%) hue-rotate(201deg) brightness(94%) contrast(87%);
+}
+
+#modeSwitcher path {
+    fill: var(--secondary-color) !important;
+}
+
+button svg path,
+a svg path {
+    fill: var(--secondary-color) !important;
+    stroke: var(--secondary-color) !important;
+}
+
 * {
     margin-block: 0px;
 }
