@@ -1029,10 +1029,7 @@ path {
 
 }
 
-
-
 @media (max-width: 1079px) and (min-width:769px) {
-
     @font-face {
         font-family: "Antonio-Regular.ttf";
         src: url(./fonts/Antonio-Regular.ttf);
@@ -1057,7 +1054,7 @@ path {
         /* colors */
         --background-color: #101010;
         --secondary-color: #CCC9BB;
-        --primary-gradient: linear-gradient(180deg, hsl(0, 0%, 9%), var(--background-color));
+        --primary-gradient: linear-gradient(to bottom, hsl(0, 0%, 9%), var(--background-color));
         --secondary-transparent-60: rgba(204, 201, 187, 0.6);
         --secondary-transparent-30: rgba(204, 201, 187, 0.3);
         --secondary-transparent-0: rgba(204, 201, 187, 0.01);
@@ -1117,7 +1114,6 @@ path {
         width: 100%;
     }
 
-
     .mobile {
         display: grid;
         grid-template-rows: 80px repeat(7, auto);
@@ -1145,8 +1141,12 @@ path {
     .line {
         height: 2px;
         width: 28px;
-        background-color: #CCC9BB;
+        background-color: var(--secondary-color);
         border-radius: 20px;
+    }
+
+    [data-theme="light"] .line {
+        background-color: var(--secondary-color);
     }
 
     .logo {
@@ -1176,7 +1176,6 @@ path {
         padding: var(--spacing-2x) var(--spacing-8x) var(--spacing-8x) var(--spacing-8x);
         height: auto;
     }
-
 
     .nameYear {
         display: flex;
@@ -1270,7 +1269,6 @@ path {
         border: 1px solid var(--secondary-transparent-0);
     }
 
-
     /* test */
 
     .nav-overlay nav ul li a {
@@ -1358,7 +1356,6 @@ path {
         overflow: scroll;
     }
 
-
     .gridContainer {
         display: grid;
         grid-template-rows: auto;
@@ -1394,8 +1391,12 @@ path {
     .line {
         height: 2px;
         width: 28px;
-        background-color: #CCC9BB;
+        background-color: var(--secondary-color);
         border-radius: 20px;
+    }
+
+    [data-theme="light"] .line {
+        background-color: var(--secondary-color);
     }
 
     .logo {
