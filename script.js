@@ -155,10 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('wheel', (event) => {
         console.log('Wheel event triggered');
 
-        const isMobileWidth = window.innerWidth < 768;
-        console.log('Mobile width:', isMobileWidth);
+        // Check if we're in tablet range (768px-1080px) or mobile (<768px)
+        const isTabletOrMobile = window.innerWidth < 1080;
+        console.log('Tablet or mobile:', isTabletOrMobile);
 
-        if (isMobileWidth) {
+        if (isTabletOrMobile) {
             document.body.style.overflow = 'auto';
             return;
         }
@@ -202,13 +203,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle window resize
     window.addEventListener('resize', () => {
-        const isMobileWidth = window.innerWidth < 768;
-        document.body.style.overflow = isMobileWidth ? 'auto' : 'hidden';
+        const isTabletOrMobile = window.innerWidth < 1080;
+        document.body.style.overflow = isTabletOrMobile ? 'auto' : 'hidden';
     });
 
     // Initial state
-    const isMobileWidth = window.innerWidth < 768;
-    document.body.style.overflow = isMobileWidth ? 'auto' : 'hidden';
+    const isTabletOrMobile = window.innerWidth < 1080;
+    document.body.style.overflow = isTabletOrMobile ? 'auto' : 'hidden';
 });
 
 

@@ -1145,7 +1145,7 @@ path {
     .line {
         height: 2px;
         width: 28px;
-        background-color: var(--secondary-color);
+        background-color: #CCC9BB;
         border-radius: 20px;
     }
 
@@ -1394,7 +1394,7 @@ path {
     .line {
         height: 2px;
         width: 28px;
-        background-color: var(--secondary-color);
+        background-color: #CCC9BB;
         border-radius: 20px;
     }
 
